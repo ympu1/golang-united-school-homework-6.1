@@ -63,7 +63,7 @@ func (b *box) ReplaceByIndex(i int, shape Shape) (Shape, error) {
 
 	if i >= len(b.shapes) || i < 0 {
 		err := fmt.Errorf("index doesn't exist or index went out of the range")
-		return shape, err
+		return oldShape, err
 	}
 
 	oldShape = b.shapes[i]
