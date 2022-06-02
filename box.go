@@ -100,7 +100,7 @@ func (b *box) RemoveAllCircles() error {
 	var haveCircles bool
 	for i := 0; i < len(b.shapes); i++ {
 		shape := b.shapes[i]
-		_, ok := shape.(Circle)
+		_, ok := shape.(*Circle)
 
 		if ok {
 			haveCircles = true
