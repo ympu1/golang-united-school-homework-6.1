@@ -1,0 +1,29 @@
+package golang_united_school_homework
+
+import (
+	"fmt"
+	"testing"
+)
+
+func TestRemoveAllCircles(t *testing.T) {
+	var c Circle
+	var c2 Circle
+	var r Rectangle
+	var r2 Rectangle
+	var tt Triangle
+	var tt2 Triangle
+
+	box := NewBox(10)
+
+	box.AddShape(c)
+	box.AddShape(r)
+	box.AddShape(r2)
+	box.AddShape(tt2)
+	box.AddShape(c2)
+	box.AddShape(tt)
+
+	fmt.Println("len before:", len(box.shapes))
+	box.RemoveAllCircles()
+	fmt.Println("len:", len(box.shapes))
+	t.Errorf("not circle!")
+}
